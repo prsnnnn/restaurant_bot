@@ -30,7 +30,6 @@ def starting(message):
         chat_id=message.chat.id
         user_name=message.from_user.first_name
         markup1=types.ReplyKeyboardMarkup(one_time_keyboard=True,resize_keyboard=True)
-        #markup1.add(emoji["time"]+' Забронировать столик',emoji["book"]+' Меню',emoji["ab"]+' О ресторане', emoji["feet"]+' Где нас найти',emoji["rev"]+' Отзывы',emoji['quest']+" Задать вопрос")
         markup1.add(emoji["time"]+' Забронювати столик',emoji["book"]+' Меню',emoji["ab"]+' Про ресторан', emoji["feet"]+' Де нас знайти?',emoji["rev"]+' Відгуки',emoji['quest']+" Задати питання")        
         send3=bot.send_message(chat_id, "Оберіть пункт меню:", reply_markup=markup1)
         bot.register_next_step_handler(send3,second)
